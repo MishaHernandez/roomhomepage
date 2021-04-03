@@ -1,0 +1,18 @@
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    padding: 3rem 1.5rem;
+
+    position: fixed;
+    width: 100%;
+
+    &__logo {
+        justify-self: center;
+    }
+
+    &-menu {
+        display: none;
+    }
+}
