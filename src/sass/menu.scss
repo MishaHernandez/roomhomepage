@@ -1,0 +1,17 @@
+.navbar {
+    &-menu {
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+
+        justify-content: space-between;
+
+        &__link {
+            text-decoration: none;
+            text-transform: lowercase;
+            color: $black;
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+}

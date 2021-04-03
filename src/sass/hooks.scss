@@ -1,0 +1,10 @@
+.js-open-menu {
+    grid-template-columns: repeat(2, auto);
+    background-color: $white;
+}
+.js-hidden-logo {
+    display: none;
+}
+.js-show-menu {
+    display: flex;
+}

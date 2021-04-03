@@ -368,8 +368,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding: 3rem 1.5rem;
-  position: fixed;
+  padding: 2.28125rem 1.5rem;
+  position: absolute;
+  top: 0;
   width: 100%;
 }
 .navbar__logo {
@@ -377,6 +378,20 @@ body {
 }
 .navbar-menu {
   display: none;
+}
+
+.navbar-menu {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.navbar-menu__link {
+  text-decoration: none;
+  text-transform: lowercase;
+  color: black;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .content__paragraph, .slider-content__paragraph {
@@ -452,6 +467,19 @@ body {
 }
 .attribution__link {
   color: #3e52a3;
+}
+
+.js-open-menu {
+  grid-template-columns: repeat(2, auto);
+  background-color: white;
+}
+
+.js-hidden-logo {
+  display: none;
+}
+
+.js-show-menu {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
