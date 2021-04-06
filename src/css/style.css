@@ -364,14 +364,17 @@ body {
   font-size: 12px;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .navbar {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding: 2.28125rem 1.5rem;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 .navbar__logo {
   justify-self: center;
@@ -399,11 +402,26 @@ body {
   line-height: 1.65;
 }
 
+.slider-container {
+  overflow-x: hidden;
+}
+
+.slider-section {
+  display: flex;
+  width: 300%;
+  /* para tres imagenes */
+  margin-left: -100%;
+  /* posiciona a la figura 1 */
+}
+
 .slider-content__image, .content__image {
   width: 100%;
   height: auto;
 }
 
+.slider-content {
+  width: 100%;
+}
 .slider-content__intro {
   width: 85%;
   margin-left: auto;
