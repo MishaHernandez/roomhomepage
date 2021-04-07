@@ -1,3 +1,8 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 .navbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -5,9 +10,9 @@
 
     padding: 2.28125rem 1.5rem;
 
-    position: absolute;
-    top: 0;
-    width: 100%;
+    // position: absolute;
+    // top: 0;
+    // width: 100%;
 
     &__logo {
         justify-self: center;
