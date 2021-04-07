@@ -1,4 +1,4 @@
-const sliderSection = document.getElementById("slider");
+const sliderSection = document.getElementById("slider-1");
 let sliderContent = document.querySelectorAll(".slider-content");
 let sliderContentLast = sliderContent[sliderContent.length -1];
 const btnRight = document.getElementById("btnRight");
@@ -18,6 +18,7 @@ function next() {
         sliderSection.style.marginLeft = "-100%";
     }, 500);
 }
+
 
 function prev() {
     let sliderContent = document.querySelectorAll(".slider-content");
