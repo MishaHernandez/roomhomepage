@@ -422,7 +422,7 @@ header {
   height: auto;
 }
 
-.slider-content {
+.slider-content1, .slider-content2 {
   width: 100%;
 }
 .slider-content__intro {
