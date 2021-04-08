@@ -11,15 +11,36 @@ header {
 
     padding: 3rem 1.5rem;
 
+    @include desktop-up {
+        width: 60%;
+        padding: 4rem 4rem;
+        grid-template-columns: 1fr 5fr;
+    }
+
     // position: absolute;
     // top: 0;
     // width: 100%;
 
+    &__menu-icon {
+        @include desktop-up {
+            display: none;
+        }
+    }
+
     &__logo {
         justify-self: center;
+        @include desktop-up {
+            justify-self: start;
+        }
     }
 
     &-menu {
         display: none;
+        justify-content: space-between;
+
+        @include desktop-up {
+            display: flex;
+            justify-content: flex-start;
+        }
     }
 }

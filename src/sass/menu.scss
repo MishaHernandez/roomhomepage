@@ -4,14 +4,17 @@
         margin: 0;
         list-style-type: none;
 
-        justify-content: space-between;
-
         &__link {
             text-decoration: none;
             text-transform: lowercase;
             color: $black;
             font-size: 13px;
             font-weight: 700;
+            @include desktop-up {
+                color: $white;
+                margin-right: 2rem;
+                font-weight: 600;
+            }
         }
     }
 }
