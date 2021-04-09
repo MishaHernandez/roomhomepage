@@ -26,12 +26,6 @@ main {
     width: 300%; /* para tres imagenes */
     height: 100%;
     margin-left: -100%; /* posiciona a la figura 1 */
-
-    &--images {
-        @include desktop-up {
-            // flex-direction: column;
-        }
-    }
 }
 
 .slider-content__image, .content__image {

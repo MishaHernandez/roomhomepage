@@ -36,10 +36,17 @@ header {
     &-menu {
         display: none;
         justify-content: space-between;
+        margin: 0;
 
         @include desktop-up {
             display: flex;
             justify-content: flex-start;
+        }
+
+        &__link {
+            @include desktop-up {
+                margin-right: 2rem;
+            }
         }
     }
 }
