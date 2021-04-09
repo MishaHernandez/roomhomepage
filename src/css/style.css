@@ -447,9 +447,14 @@ main {
   }
 }
 
+.container {
+  position: relative;
+}
+
 .slider-container {
   overflow: hidden;
   width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -521,6 +526,11 @@ main {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media (min-width: 1200px) {
+  .slider-nav {
+    right: -10rem;
+  }
 }
 .slider-nav__arrow {
   width: 3.4375rem;
