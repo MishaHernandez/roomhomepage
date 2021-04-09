@@ -370,6 +370,12 @@ header {
   width: 100%;
   z-index: 10;
 }
+@media (min-width: 1200px) {
+  header {
+    position: absolute;
+    width: 60%;
+  }
+}
 
 .navbar {
   display: grid;
@@ -379,7 +385,6 @@ header {
 }
 @media (min-width: 1200px) {
   .navbar {
-    width: 60%;
     padding: 4rem 4rem;
     grid-template-columns: 1fr 5fr;
   }
@@ -433,8 +438,17 @@ header {
   line-height: 1.65;
 }
 
+main {
+  display: grid;
+}
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: 58.4% 41.6%;
+  }
+}
+
 .slider-container {
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   position: relative;
 }
@@ -443,13 +457,14 @@ header {
   display: flex;
   width: 300%;
   /* para tres imagenes */
+  height: 100%;
   margin-left: -100%;
   /* posiciona a la figura 1 */
 }
-
 .slider-content__image, .content__image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider-content1, .slider-content2 {
@@ -463,13 +478,29 @@ header {
   margin-bottom: 1.2rem;
   padding: 2.125rem;
 }
+@media (min-width: 1200px) {
+  .slider-content__intro {
+    padding: 75px 94px;
+  }
+}
 .slider-content__title {
   font-size: 1.75rem;
   color: black;
   margin-bottom: 1rem;
 }
+@media (min-width: 1200px) {
+  .slider-content__title {
+    font-size: 2.35rem;
+    font-weight: 600;
+  }
+}
 .slider-content__paragraph {
   margin-bottom: 3.3rem;
+}
+@media (min-width: 1200px) {
+  .slider-content__paragraph {
+    margin-bottom: 2.5rem;
+  }
 }
 .slider-content__button {
   text-transform: uppercase;
@@ -488,7 +519,7 @@ header {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  bottom: 3px;
+  bottom: 0;
   right: 0;
 }
 .slider-nav__arrow {
@@ -501,7 +532,22 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 1200px) {
+  .slider-nav__arrow {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 
+.content {
+  display: grid;
+  grid-column: 1/-1;
+}
+@media (min-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 1.35fr 1fr;
+  }
+}
 .content__article {
   width: 85%;
   margin-left: auto;

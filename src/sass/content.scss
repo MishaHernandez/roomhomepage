@@ -3,8 +3,15 @@
     line-height: 1.65;
 }
 
+main {
+    display: grid;
+    @include desktop-up {
+        grid-template-columns: 58.4% 41.6%;
+    }
+}
+
 .slider-container {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
     position: relative;
 }
@@ -12,12 +19,20 @@
 .slider-section {
     display: flex;
     width: 300%; /* para tres imagenes */
+    height: 100%;
     margin-left: -100%; /* posiciona a la figura 1 */
+
+    &--images {
+        @include desktop-up {
+            // flex-direction: column;
+        }
+    }
 }
 
 .slider-content__image, .content__image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .slider-content {
@@ -32,15 +47,25 @@
         margin-top: 12px;
         margin-bottom: 1.2rem;
         padding: 2.125rem;
+        @include desktop-up {
+            padding: 75px 94px;
+        }
     }
     &__title {
         font-size: 1.75rem;
         color: $black;
-        margin-bottom: 1rem
+        margin-bottom: 1rem;
+        @include desktop-up {
+            font-size: 2.35rem;
+            font-weight: 600;
+        }
     }
     &__paragraph {
         @extend %paragraph;
         margin-bottom: 3.3rem;
+        @include desktop-up {
+            margin-bottom: 2.5rem;
+        }
     }
     &__button {
         text-transform: uppercase;
@@ -63,8 +88,11 @@
     justify-content: flex-end;
 
     position: absolute;
-    bottom: 3px;
+    bottom: 0;
     right: 0;
+    // @include desktop-up {
+    //     right: -10rem;
+    // }
 
     &__arrow {
         width: 3.4375rem;
@@ -77,10 +105,21 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        @include desktop-up {
+            width: 5rem;
+            height: 5rem;
+        }
     }
 }
 
 .content {
+    display: grid;
+    // grid-item
+    grid-column: 1/-1;
+    @include desktop-up {
+        grid-template-columns: 1fr 1.35fr 1fr;
+    }
+
     &__article {
         width: 85%;
         margin-left: auto;
