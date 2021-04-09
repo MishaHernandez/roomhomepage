@@ -364,6 +364,11 @@ body {
   font-size: 12px;
 }
 
+.slider-content__paragraph, .content__paragraph {
+  color: #a1a1a1;
+  line-height: 1.65;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -437,11 +442,6 @@ header {
   }
 }
 
-.content__paragraph, .slider-content__paragraph {
-  color: #a1a1a1;
-  line-height: 1.65;
-}
-
 main {
   display: grid;
 }
@@ -455,22 +455,6 @@ main {
   position: relative;
 }
 
-.slider-container {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.slider-section {
-  display: flex;
-  width: 300%;
-  /* para tres imagenes */
-  height: 100%;
-  margin-left: -100%;
-  /* posiciona a la figura 1 */
-}
-
 .slider-content__image, .content__image {
   width: 100%;
   height: 100%;
@@ -480,13 +464,53 @@ main {
 .slider-content1, .slider-content2 {
   width: 100%;
 }
+
+.content {
+  display: grid;
+  grid-column: 1/-1;
+}
+@media (min-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 1.35fr 1fr;
+  }
+}
+.content__article {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 3.6rem;
+}
+.content__paragraph {
+  margin-bottom: 3.3rem;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slider-section {
+  display: flex;
+  width: 300%;
+  /* para tres imagenes */
+  height: 100%;
+  /* ajustarse al alto de su container */
+  margin-left: -100%;
+  /* posiciona a la figura 1 */
+}
+
 .slider-content__intro {
   width: 100%;
+  padding: 2.125rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 12px;
   margin-bottom: 1.2rem;
-  padding: 2.125rem;
 }
 @media (min-width: 1200px) {
   .slider-content__intro {
@@ -513,11 +537,6 @@ main {
   }
 }
 .slider-content__button {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #454545;
-  font-weight: 600;
-  letter-spacing: 8px;
   display: flex;
   align-items: center;
 }
@@ -555,27 +574,12 @@ main {
   }
 }
 
-.content {
-  display: grid;
-  grid-column: 1/-1;
-}
-@media (min-width: 1200px) {
-  .content {
-    grid-template-columns: 1fr 1.35fr 1fr;
-  }
-}
-.content__article {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.content__subtitle {
+.slider-content__button {
   text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-top: 3.6rem;
-}
-.content__paragraph {
-  margin-bottom: 3.3rem;
+  text-decoration: none;
+  color: #454545;
+  font-weight: 600;
+  letter-spacing: 8px;
 }
 
 .attribution {
