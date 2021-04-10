@@ -9,9 +9,29 @@
             color: $black;
             font-size: 13px;
             font-weight: 700;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            position: relative;
+
             @include desktop-up {
                 color: $white;
                 font-weight: 600;
+                
+                &:hover {
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 1.5rem;
+                        height: 2px;
+                        background-color: #fff;
+        
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
             }
         }
     }

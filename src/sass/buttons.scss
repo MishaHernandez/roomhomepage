@@ -23,9 +23,17 @@
         justify-content: center;
         align-items: center;
 
+        
         @include desktop-up {
             width: 5rem;
             height: 5rem;
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: $very-dark-gray;
+                cursor: pointer;
+                transition: background-color .3s;
+            }
         }
     }
 }
@@ -36,4 +44,15 @@
     color: $very-dark-gray;
     font-weight: 600;
     letter-spacing: 8px;
+    @include desktop-up {
+        transition: color .3s;
+
+        path { transition: fill .3s; }
+
+        &:hover {
+            color: $dark-gray;
+            transition: color .3s;
+            path { fill: $dark-gray; transition: fill .3s; }
+        }
+    }
 }
