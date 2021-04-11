@@ -13,3 +13,7 @@
 @mixin desktop-up {
     @media (min-width: 1200px) { @content; }
 }
+
+@mixin big-desktop-up {
+    @media (min-width: 1440px) { @content; }
+}

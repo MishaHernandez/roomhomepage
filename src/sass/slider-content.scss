@@ -17,8 +17,9 @@
 // SLIDER CONTENS
 .slider-content {
     &__intro {
-        width: 100%;
-        padding: 2.125rem;
+        width: 85%;
+        padding-top: 2.125rem;
+        padding-bottom: 2.125rem;
 
         margin-left: auto;
         margin-right: auto;
@@ -26,7 +27,11 @@
         margin-bottom: 1.2rem;
 
         @include desktop-up {
-            padding: 75px 94px;
+            width: 73%;
+        }
+        @include big-desktop-up {
+            width: 70%;
+            padding-top: 4.375rem;
         }
     }
 
