@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -23,109 +24,125 @@
       <img class="navbar__logo" src="./images/logo.svg" alt="room logo">
 
       <ul class="navbar-menu">
-        <li><a class="navbar-menu__link" href="#">Home</a></li>
-        <li><a class="navbar-menu__link" href="#">Shop</a></li>
-        <li><a class="navbar-menu__link" href="#">About</a></li>
-        <li><a class="navbar-menu__link" href="#">Contact</a></li>
+        <li><a class="navbar-menu__link" href="#" title="Homepage">Home</a></li>
+        <li><a class="navbar-menu__link" href="#" title="Shop page">Shop</a></li>
+        <li><a class="navbar-menu__link" href="#" title="about page">About</a></li>
+        <li><a class="navbar-menu__link" href="#" title="contact page">Contact</a></li>
       </ul>
     </div>
   </header>
 
   <main>
     <!-- ------------------ SLIDERS ------------------ -->
-    <div class="slider-container">
-      <div class="slider-section" id="slider">
-        <div class="slider-content">
-          <picture>
+    <div class="container">
+      <div class="slider-container slider-container--images"> <!-- overflow: hidden -->
+        <div class="slider-section slider-section--images" id="slider-1"> <!-- 300% -->
+          <!-- picture 1 -->
+          <picture class="slider-content1">
             <source media="(min-width: 1200px)" srcset="./images/desktop-image-hero-1.jpg">
-            <img class="slider-content__image" src="./images/mobile-image-hero-1.jpg" alt="">
+            <img class="slider-content__image" src="./images/mobile-image-hero-1.jpg" alt="forniture image">
           </picture>
-    
-          <article class="slider-content__intro">
-            <h2 class="slider-content__title">Discover innovative ways to decorate</h2>
-      
-            <p class="slider-content__paragraph">
-              We provide unmatched quality, comfort, and style for property owners across the country.
-              Our experts combine form and function in bringing your vision to life. Create a room in your
-              own style with our collection and make your property a reflection of you and what you love.
-            </p>
-      
-            <a class="slider-content__button" href="#">
-              Shop now
-              <svg class="arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
-                  fill="#000" fill-rule="nonzero" /></svg>
-            </a>
-          </article>
-        </div>
-    
-        <div class="slider-content">
-          <picture>
+          <!-- picture 2 -->
+          <picture class="slider-content1">
             <source media="(min-width: 1200px)" srcset="./images/desktop-image-hero-2.jpg">
-            <img class="slider-content__image" src="./images/mobile-image-hero-2.jpg" alt="">
+            <img class="slider-content__image" src="./images/mobile-image-hero-2.jpg" alt="forniture image">
           </picture>
-    
-          <article class="slider-content__intro">
-            <h2 class="slider-content__title">We are available all across the globe</h2>
-      
-            <p class="slider-content__paragraph">
-              With stores all over the world, it's easy for you to find furniture for your home or place of business.
-              Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
-              store locator. Any questions? Don't hesitate to contact us today.
-            </p>
-      
-            <a class="slider-content__button" href="#">
-              Shop now
-              <svg class="arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
-                  fill="#000" fill-rule="nonzero" /></svg>
-            </a>
-          </article>
-        </div>
-    
-        <div class="slider-content">
-          <picture>
+          <!-- picture 3 -->
+          <picture class="slider-content1">
             <source media="(min-width: 1200px)" srcset="./images/desktop-image-hero-3.jpg">
-            <img class="slider-content__image" src="./images/mobile-image-hero-3.jpg" alt="">
+            <img class="slider-content__image" src="./images/mobile-image-hero-3.jpg" alt="forniture image">
           </picture>
-    
-          <article class="slider-content__intro">
-            <h2 class="slider-content__title">Manufactured with the best materials</h2>
-      
-            <p class="slider-content__paragraph">
-              Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
-              to ensure that every product is made as perfect and as consistent as possible. With three decades of
-              experience in this industry, we understand what customers want for their home and office.
-            </p>
-      
-            <a class="slider-content__button" href="#">
-              Shop now
-              <svg class="arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
-                  fill="#000" fill-rule="nonzero" /></svg>
-            </a>
-          </article>
         </div>
       </div>
       <!-- ------------------ navigation buttons ------------------ -->
       <div class="slider-nav">
         <button class="slider-nav__arrow" id="btnLeft">
           <svg class="arrow" width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" /></svg>
+            <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd" />
+          </svg>
         </button>
         <button class="slider-nav__arrow" id="btnRight">
           <svg class="arrow" width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" /></svg>
+            <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd" />
+          </svg>
         </button>
+      </div>
+    </div>
+
+    <div class="slider-container slider-container--articles"> <!-- overflow: hidden -->
+      <div class="slider-section" id="slider-2"> <!-- 300% -->
+
+        <!-- ------------ SLIDER 1 ------------ -->
+        <div class="slider-content2">
+          <article class="slider-content__intro">
+            <h2 class="slider-content__title">Discover innovative ways to decorate</h2>
+  
+            <p class="slider-content__paragraph">
+              We provide unmatched quality, comfort, and style for property owners across the country.
+              Our experts combine form and function in bringing your vision to life. Create a room in your
+              own style with our collection and make your property a reflection of you and what you love.
+            </p>
+  
+            <a class="slider-content__button" href="#" title="arrow button">
+              Shop now
+              <svg class="arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                  fill="#000" fill-rule="nonzero" />
+              </svg>
+            </a>
+          </article>
+        </div>
+
+        <!-- ------------ SLIDER 2 ------------ -->
+       <div class="slider-content2">
+          <article class="slider-content__intro">
+            <h2 class="slider-content__title">We are available all across the globe</h2>
+  
+            <p class="slider-content__paragraph">
+              With stores all over the world, it's easy for you to find furniture for your home or place of
+              business.
+              Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+              store locator. Any questions? Don't hesitate to contact us today.
+            </p>
+  
+            <a class="slider-content__button" href="#" title="arrow button">
+              Shop now
+              <svg class="arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                  fill="#000" fill-rule="nonzero" /></svg>
+            </a>
+          </article>
+       </div>
+
+        <!-- ------------ SLIDER 3 ------------ -->
+        <div class="slider-content2">
+          <article class="slider-content__intro">
+            <h2 class="slider-content__title">Manufactured with the best materials</h2>
+  
+            <p class="slider-content__paragraph">
+              Our modern furniture store provide a high level of quality. Our company has invested in advanced
+              technology
+              to ensure that every product is made as perfect and as consistent as possible. With three decades of
+              experience in this industry, we understand what customers want for their home and office.
+            </p>
+  
+            <a class="slider-content__button" href="#" title="arrow button">
+              Shop now
+              <svg class="arrow" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+                  fill="#000" fill-rule="nonzero" /></svg>
+            </a>
+          </article>
+        </div>
       </div>
     </div>
 
     <!-- ------------------ CONTENT ------------------ -->
     <div class="content">
-      <img class="content__image" src="./images/image-about-dark.jpg" alt="">
+      <img class="content__image" src="./images/image-about-dark.jpg" alt="forniture image">
 
       <article class="content__article">
         <h4 class="content__subtitle">About our furniture</h4>
@@ -138,16 +155,9 @@
         </p>
       </article>
 
-      <img class="content__image" src="./images/image-about-light.jpg" alt="">
+      <img class="content__image" src="./images/image-about-light.jpg" alt="forniture image">
     </div>
   </main>
-
-  <!-- ------------------ FOOTER ------------------ -->
-  <div class="attribution">
-    Challenge by <a class="attribution__link" href="https://www.frontendmentor.io?ref=challenge"
-      target="_blank">Frontend Mentor</a>.
-    Coded by <a class="attribution__link" href="#">Your Name Here</a>.
-  </div>
 
   <script src="js/menu.js"></script>
   <script src="js/slider.js"></script>

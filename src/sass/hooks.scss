@@ -2,9 +2,35 @@
     grid-template-columns: repeat(2, auto);
     background-color: $white;
 }
+
 .js-hidden-logo {
     display: none;
 }
+
 .js-show-menu {
     display: flex;
 }
+
+.js-opacity-0 {
+    opacity: 0;
+}
+
+// .js-slider-section-start {
+//     margin-left: -200%;
+//     transition: all 0.5s;
+// }
+
+// .js-slider-section-end {
+//     margin-left: -100%;
+//     transition: none;
+// }
+
+// .js-slider-content2-fade-out {
+//     opacity: 0;
+//     transition: opacity .1s;
+// }
+
+// .js-slider-content2-fade-in {
+//     opacity: 0;
+//     transition: opacity 2s;
+// }

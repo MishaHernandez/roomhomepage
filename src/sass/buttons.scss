@@ -1,0 +1,58 @@
+.slider-nav {
+    display: flex;
+    justify-content: flex-end;
+
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+
+    @include desktop-up {
+        right: -10rem;
+    }
+
+    &__arrow {
+        width: 3.4375rem;
+        height: 3.4375rem;
+
+        border-style: none;
+        background-color: $black;
+        padding: 1rem;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        @include desktop-up {
+            width: 5rem;
+            height: 5rem;
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: $very-dark-gray;
+                cursor: pointer;
+                transition: background-color .3s;
+            }
+        }
+    }
+}
+
+.slider-content__button {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $very-dark-gray;
+    font-weight: 600;
+    letter-spacing: 8px;
+    @include desktop-up {
+        transition: color .3s;
+
+        path { transition: fill .3s; }
+
+        &:hover {
+            color: $dark-gray;
+            transition: color .3s;
+            path { fill: $dark-gray; transition: fill .3s; }
+        }
+    }
+}

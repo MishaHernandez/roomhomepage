@@ -2,8 +2,11 @@
 @import 'fonts';
 @import 'normalize';
 @import 'base';
+@import 'settings';
+@import 'breakpoints';
 @import 'header';
 @import 'menu';
 @import 'content';
-@import 'attribution';
+@import 'slider-content';
+@import 'buttons';
 @import 'hooks';

@@ -1,24 +1,52 @@
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
+    z-index: 10;
+    @include desktop-up {
+        position: absolute;
+        width: 60%;
+    }
 }
 .navbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
 
-    padding: 2.28125rem 1.5rem;
+    padding: 3rem 1.5rem;
 
-    // position: absolute;
-    // top: 0;
-    // width: 100%;
+    @include desktop-up {
+        padding: 4rem 4rem;
+        grid-template-columns: 1fr 5fr;
+    }
+
+    &__menu-icon {
+        @include desktop-up {
+            display: none;
+        }
+    }
 
     &__logo {
         justify-self: center;
+        @include desktop-up {
+            justify-self: start;
+        }
     }
 
     &-menu {
         display: none;
+        justify-content: space-between;
+        margin: 0;
+
+        @include desktop-up {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__link {
+            @include desktop-up {
+                margin-right: 2rem;
+            }
+        }
     }
 }
