@@ -17,4 +17,4 @@
 .prettierignore
 
 #user
-dist/
+# dist/
